@@ -1,80 +1,56 @@
+"use client";
+
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Footer from "@/components/Footer";
+
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <main className="min-h-screen bg-gray-100 p-6">
-      {/* Hero Section */}
-      <section className="text-center py-10">
-        <h1 className="text-4xl font-bold mb-2">Keith Pineda</h1>
-        <p className="text-lg text-gray-600">
-          Software Engineer | AWS Cloud Practitioner | Web & Mobile Developer
-        </p>
-      </section>
+    <main className="min-h-screen w-full bg-white px-6 py-12 flex flex-col items-center justify-center font-sans">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+        {/* Avatar (Left side) */}
+        <div className="flex justify-center animate-fade-in">
+          <Image
+            src="/keith-landing.png"
+            alt="Keith - Software Engineer"
+            width={640}
+            height={640}
+            className="w-full h-auto"
+          />
+        </div>
 
-      {/* Projects Section */}
-      <section className="py-8">
-        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Project 1 */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="text-xl font-bold mb-2">Gown Rental Web App</h3>
-            <p className="text-gray-600 text-sm mb-2">
-              Full-stack app for managing rentals, appointments, inventory, and
-              quarterly reports.
-            </p>
-            <p className="text-sm text-gray-500">
-              Tech: Next.js, Prisma, Supabase, Tailwind, Resend
-            </p>
-          </div>
+        {/* Text + Buttons (Right side) */}
+        <div className="text-center md:text-left max-w-md animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+            Hi! <span className="inline-block">👋</span> I’m Keith
+          </h1>
+          <p className="text-gray-700 text-xl sm:text-2xl md:text-4xl mb-6 leading-relaxed">
+            Engineer by craft,
+            <br />
+            entrepreneur by passion.
+          </p>
 
-          {/* Project 2 */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="text-xl font-bold mb-2">
-              Cinema Scheduler (NestJS)
-            </h3>
-            <p className="text-gray-600 text-sm mb-2">
-              Cron job integration to fetch and store weekly cinema schedules
-              using external API.
-            </p>
-            <p className="text-sm text-gray-500">
-              Tech: NestJS, PostgreSQL, Schedule Module
-            </p>
-          </div>
-
-          {/* Project 3 */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="text-xl font-bold mb-2">3D Mall Map Viewer</h3>
-            <p className="text-gray-600 text-sm mb-2">
-              Interactive mall directory with POI highlighting, raycasting, and
-              pathfinding.
-            </p>
-            <p className="text-sm text-gray-500">
-              Tech: Three.js, React Three Fiber, Leva, Zustand
-            </p>
+          <div className=" flex flex-row gap-3 justify-center md:justify-start">
+            <button
+              onClick={() => router.push("/projects")}
+              className="bg-blue-800 text-white py-3 px-6 rounded-lg font-medium text-lg sm:text-xl md:text-2xl hover:bg-blue-900 transition shadow-md"
+            >
+              View Projects
+            </button>
+            <button
+              onClick={() => router.push("/about")}
+              className="border border-gray-800 text-gray-800 py-3 px-6 rounded-lg font-medium text-lg sm:text-xl md:text-2xl hover:bg-gray-100 transition shadow-sm"
+            >
+              About Me
+            </button>
           </div>
         </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-10">
-        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-        <p className="text-gray-700 leading-relaxed max-w-3xl">
-          I’m Keith, a software engineer from the Philippines with experience in
-          backend and full-stack development. I specialize in building web and
-          mobile applications using React, Next.js, NestJS, and more. I'm an AWS
-          Certified Cloud Practitioner and a former college instructor with a
-          degree in Electronics Engineering. My career journey includes
-          engineering, business, and software development.
-        </p>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-10">
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-        <ul className="text-gray-700 space-y-2">
-          <li>Email: kitkat.m.pineda@gmail.com</li>
-          <li>GitHub: github.com/keithpineda</li>
-          <li>LinkedIn: linkedin.com/in/keithpineda</li>
-        </ul>
-      </section>
+      </div>
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
