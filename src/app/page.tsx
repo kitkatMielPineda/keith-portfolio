@@ -26,6 +26,8 @@ export default function Home() {
         <div className="text-center md:text-left max-w-md animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
             Hi! <span className="inline-block">👋</span> I’m Keith
+            <br />
+            (or Kitkat👩‍💻)
           </h1>
           <p className="text-gray-700 text-xl sm:text-2xl md:text-4xl mb-6 leading-relaxed">
             Engineer by craft,
