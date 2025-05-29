@@ -9,8 +9,8 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className="min-h-screen w-full bg-white px-6 py-12 flex flex-col items-center justify-center font-sans">
-      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+    <main className="min-h-screen w-full bg-white px-6 py-0 flex flex-col items-center justify-around font-sans">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-16 mt-12">
         {/* Avatar (Left side) */}
         <div className="flex justify-center animate-fade-in">
           <Image

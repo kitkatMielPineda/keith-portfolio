@@ -3,9 +3,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 text-center text-sm text-gray-500">
+    <footer className="mt-20 px-6 border-t text-center text-gray-600">
       <p className="mb-2">Crafting code with intention.</p>
-      <div className="flex justify-center gap-6">
+      <p className="text-sm text-gray-600 font-extrabold mb-2">
+        Let’s connect — feel free to reach out anytime.
+      </p>
+      <div className="flex justify-center gap-6 text-xl">
         <Link
           href="https://github.com/kitkatMielPineda"
           target="_blank"
@@ -42,6 +45,9 @@ export default function Footer() {
           </svg>
         </Link>
       </div>
+      <p className="text-xs mt-4 text-gray-400">
+        Crafted with care — © 2025 Keith / Kitkat
+      </p>
     </footer>
   );
 }

@@ -10,10 +10,13 @@
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css --minify"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@heroicons/react": "^2.2.0",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-swipeable": "^7.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
