@@ -149,8 +149,8 @@ export default function ProjectsPage() {
 
             <ul className="text-sm text-gray-700 mb-4 list-disc list-inside space-y-1">
               <li>
-                Built the fan's and influencer's feed and post creation UI with
-                scheduling and image uploads
+                Built the fan&rsquo;s and influencer&rsquo;s feed and post
+                creation UI with scheduling and image uploads
               </li>
               <li>
                 Implemented tooltips and onboarding flows using
@@ -214,8 +214,8 @@ export default function ProjectsPage() {
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">
               FuelMate is a mobile app built to help carpoolers and drivers
               accurately track fuel expenses and trip distances. The app
-              calculates each passenger’s share of gas costs by recording gas
-              fill-ups and trip odometer logs, grouped chronologically. It
+              calculates each passenger&rsquo;s share of gas costs by recording
+              gas fill-ups and trip odometer logs, grouped chronologically. It
               ensures fair cost-splitting by computing distance-based shares
               between gas-up events. The project was built to solve a real-world
               problem for drivers who regularly share rides and split fuel costs

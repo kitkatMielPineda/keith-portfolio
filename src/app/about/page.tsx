@@ -35,8 +35,8 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-5 text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
               <p>
-                Hi, I’m Keith — originally a registered Electronics Engineer
-                from the Philippines with roots in teaching, tech, and
+                Hi, I&rsquo;m Keith — originally a registered Electronics
+                Engineer from the Philippines with roots in teaching, tech, and
                 entrepreneurship.
               </p>
               <p>
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 solve real problems and deliver real value.
               </p>
               <p className="font-semibold italic text-gray-800">
-                Let’s build solutions that work — and last.
+                Let&rsquo;s build solutions that work — and last.
               </p>
             </div>
           </div>
