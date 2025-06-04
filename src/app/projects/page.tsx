@@ -57,12 +57,8 @@ export default function ProjectsPage() {
 
             <div
               className="relative w-72 h-48 mx-auto my-10 cursor-pointer"
-              // onClick={() => {
-              //   setCurrentIndex(0);
-              //   setIsOpen(true);
-              // }}
               onClick={() => {
-                setActiveImages(imagesproj1); // or imagesproj2 / imagesproj3
+                setActiveImages(imagesproj1);
                 setCurrentIndex(0);
                 setIsOpen(true);
               }}
@@ -83,14 +79,6 @@ export default function ProjectsPage() {
                 className="absolute w-full h-full object-cover rounded-xl shadow-xl z-20"
               />
             </div>
-
-            {/* <GalleryModal
-              isOpen={isOpen}
-              onClose={() => setIsOpen(false)}
-              images={imagesproj1}
-              currentIndex={currentIndex}
-              setCurrentIndex={setCurrentIndex}
-            /> */}
 
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">
               A full-featured scheduling platform built for my gown rental
@@ -129,12 +117,8 @@ export default function ProjectsPage() {
 
             <div
               className="relative w-72 h-48 mx-auto my-10 cursor-pointer"
-              // onClick={() => {
-              //   setCurrentIndex(0);
-              //   setIsOpen(true);
-              // }}
               onClick={() => {
-                setActiveImages(imagesproj2); // or imagesproj2 / imagesproj3
+                setActiveImages(imagesproj2);
                 setCurrentIndex(0);
                 setIsOpen(true);
               }}
@@ -155,14 +139,6 @@ export default function ProjectsPage() {
                 className="absolute w-full h-full object-cover rounded-xl shadow-xl z-20"
               />
             </div>
-
-            {/* <GalleryModal
-              isOpen={isOpen}
-              onClose={() => setIsOpen(false)}
-              images={imagesproj2}
-              currentIndex={currentIndex}
-              setCurrentIndex={setCurrentIndex}
-            /> */}
 
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">
               A published social app on both App Store and Play Store, where
@@ -212,12 +188,8 @@ export default function ProjectsPage() {
 
             <div
               className="relative w-72 h-48 mx-auto my-10 cursor-pointer"
-              // onClick={() => {
-              //   setCurrentIndex(0);
-              //   setIsOpen(true);
-              // }}
               onClick={() => {
-                setActiveImages(imagesproj3); // or imagesproj2 / imagesproj3
+                setActiveImages(imagesproj3);
                 setCurrentIndex(0);
                 setIsOpen(true);
               }}
@@ -238,14 +210,6 @@ export default function ProjectsPage() {
                 className="absolute w-full h-full object-cover rounded-xl shadow-xl z-20"
               />
             </div>
-
-            {/* <GalleryModal
-              isOpen={isOpen}
-              onClose={() => setIsOpen(false)}
-              images={imagesproj3}
-              currentIndex={currentIndex}
-              setCurrentIndex={setCurrentIndex}
-            /> */}
 
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">
               FuelMate is a mobile app built to help carpoolers and drivers
