@@ -21,9 +21,18 @@ export default function ProjectsPage() {
     "/projects/proj2/favorites.jpg",
     "/projects/proj2/calendar.jpg",
   ];
+  const imagesproj3 = [
+    "/projects/proj3/home.jpg",
+    "/projects/proj3/gas_logs.jpg",
+    "/projects/proj3/trip_logs.jpg",
+    "/projects/proj3/users_share.jpg",
+    "/projects/proj3/add_gas.png",
+    "/projects/proj3/add_trip.png",
+  ];
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeImages, setActiveImages] = useState<string[]>([]);
 
   return (
     <main className="min-h-screen px-4 sm:px-6 py-10 bg-gradient-to-b from-white to-gray-100 text-black">
@@ -48,7 +57,12 @@ export default function ProjectsPage() {
 
             <div
               className="relative w-72 h-48 mx-auto my-10 cursor-pointer"
+              // onClick={() => {
+              //   setCurrentIndex(0);
+              //   setIsOpen(true);
+              // }}
               onClick={() => {
+                setActiveImages(imagesproj1); // or imagesproj2 / imagesproj3
                 setCurrentIndex(0);
                 setIsOpen(true);
               }}
@@ -70,13 +84,13 @@ export default function ProjectsPage() {
               />
             </div>
 
-            <GalleryModal
+            {/* <GalleryModal
               isOpen={isOpen}
               onClose={() => setIsOpen(false)}
               images={imagesproj1}
               currentIndex={currentIndex}
               setCurrentIndex={setCurrentIndex}
-            />
+            /> */}
 
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">
               A full-featured scheduling platform built for my gown rental
@@ -115,7 +129,12 @@ export default function ProjectsPage() {
 
             <div
               className="relative w-72 h-48 mx-auto my-10 cursor-pointer"
+              // onClick={() => {
+              //   setCurrentIndex(0);
+              //   setIsOpen(true);
+              // }}
               onClick={() => {
+                setActiveImages(imagesproj2); // or imagesproj2 / imagesproj3
                 setCurrentIndex(0);
                 setIsOpen(true);
               }}
@@ -137,13 +156,13 @@ export default function ProjectsPage() {
               />
             </div>
 
-            <GalleryModal
+            {/* <GalleryModal
               isOpen={isOpen}
               onClose={() => setIsOpen(false)}
               images={imagesproj2}
               currentIndex={currentIndex}
               setCurrentIndex={setCurrentIndex}
-            />
+            /> */}
 
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">
               A published social app on both App Store and Play Store, where
@@ -184,8 +203,101 @@ export default function ProjectsPage() {
               select features listed above as part of a larger team.
             </p>
           </div>
+
+          {/* Project 3 */}
+          <div className="border rounded-2xl p-8 shadow-xl hover:shadow-2xl transition bg-white">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">
+              FuelMate – “Track your trips. Split your gas. Drive smarter.”
+            </h2>
+
+            <div
+              className="relative w-72 h-48 mx-auto my-10 cursor-pointer"
+              // onClick={() => {
+              //   setCurrentIndex(0);
+              //   setIsOpen(true);
+              // }}
+              onClick={() => {
+                setActiveImages(imagesproj3); // or imagesproj2 / imagesproj3
+                setCurrentIndex(0);
+                setIsOpen(true);
+              }}
+            >
+              <img
+                src={imagesproj3[2]}
+                alt="Preview 1"
+                className="absolute w-full h-full object-cover rounded-xl shadow-xl transform -translate-x-8 translate-y-2 rotate-[-2deg] z-0"
+              />
+              <img
+                src={imagesproj3[1]}
+                alt="Preview 2"
+                className="absolute w-full h-full object-cover rounded-xl shadow-xl transform translate-x-8 translate-y-2 rotate-[2deg] z-10"
+              />
+              <img
+                src={imagesproj3[0]}
+                alt="Preview 3"
+                className="absolute w-full h-full object-cover rounded-xl shadow-xl z-20"
+              />
+            </div>
+
+            {/* <GalleryModal
+              isOpen={isOpen}
+              onClose={() => setIsOpen(false)}
+              images={imagesproj3}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+            /> */}
+
+            <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+              FuelMate is a mobile app built to help carpoolers and drivers
+              accurately track fuel expenses and trip distances. The app
+              calculates each passenger’s share of gas costs by recording gas
+              fill-ups and trip odometer logs, grouped chronologically. It
+              ensures fair cost-splitting by computing distance-based shares
+              between gas-up events. The project was built to solve a real-world
+              problem for drivers who regularly share rides and split fuel costs
+              with friends or coworkers. It automates manual computations and
+              improves transparency and accountability in cost-sharing.
+            </p>
+
+            <ul className="text-sm text-gray-700 mb-4 list-disc list-inside space-y-1">
+              <li>
+                Logs gas fill-ups with date, time, liters, and price per liter
+              </li>
+              <li>
+                Records trip odometer readings, people involved, and stopovers
+              </li>
+              <li>Automatically calculates distance traveled per trip</li>
+              <li>Groups trips between gas-ups to compute total distance</li>
+              <li>
+                Splits gas cost fairly based on distance and number of people
+              </li>
+              <li>
+                Displays per-person breakdown of distance and share per gas-up
+              </li>
+              <li>Sorts data chronologically with time precision</li>
+              <li>Runs independently via Expo Go (no Metro dependency)</li>
+              <li>
+                Used for accurate and fair cost-sharing during carpooling or
+                group trips
+              </li>
+            </ul>
+
+            <p className="text-sm text-gray-500 mb-2 leading-relaxed">
+              Tech: React Native with Expo, Firebase Firestore (NoSQL), React
+              Native + custom styles, Expo EAS Update (for publishing without
+              App Store/Play Store), Expo Go (for on-device live testing)
+            </p>
+          </div>
         </div>
       </div>
+      <GalleryModal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        images={activeImages}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
+
       <Footer />
     </main>
   );
